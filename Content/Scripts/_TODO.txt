@@ -1,0 +1,8 @@
+- Ideas to add to PCG project:
+    - Train some environments on aesthetic score
+        - There should be some open source models that rate aestheticness of certain pictures?
+        - Train on different environments as well
+        - Aestheticness rating model will give each environment a rating
+        - Use ratings in discriminator as data
+    - Increase number of samples as well
+        - May need to train an aestheticness model haha...

@@ -1,0 +1,678 @@
+{
+    "General": {
+        "PCG_Env1": {
+            "graph_name": "PCG_Env1",
+            "types": {
+                "Grass": {
+                    "Meshes": [
+                        "sm_Grass_01"
+                    ],
+                    "Nodes": [
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 20.0,
+                                    "y": 20.0,
+                                    "z": 20.0
+                                },
+                                "points_per_squared_meter": 10.0
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 100.0,
+                                    "y": 100.0,
+                                    "z": 100.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 0.75,
+                                    "y": 0.75,
+                                    "z": 0.75
+                                },
+                                "scale_max": {
+                                    "x": 2.0,
+                                    "y": 2.0,
+                                    "z": 2.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.0,
+                                "upper_bound": 1.0,
+                                "invert_filter": false
+                            }
+                        }
+                    ]
+                },
+                "GroundItems": {
+                    "Meshes": [
+                        "sm_Bush_01",
+                        "sm_Bush_01"
+                    ],
+                    "Nodes": [
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 20.0,
+                                    "y": 20.0,
+                                    "z": 20.0
+                                },
+                                "points_per_squared_meter": 0.30000001192092896
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 100.0,
+                                    "y": 100.0,
+                                    "z": 100.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 1.5,
+                                    "y": 1.5,
+                                    "z": 1.5
+                                },
+                                "scale_max": {
+                                    "x": 3.0,
+                                    "y": 3.0,
+                                    "z": 3.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.30000001192092896,
+                                "upper_bound": 0.5,
+                                "invert_filter": false
+                            }
+                        },
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 20.0,
+                                    "y": 20.0,
+                                    "z": 20.0
+                                },
+                                "points_per_squared_meter": 0.30000001192092896
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 100.0,
+                                    "y": 100.0,
+                                    "z": 100.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 1.5,
+                                    "y": 1.5,
+                                    "z": 1.5
+                                },
+                                "scale_max": {
+                                    "x": 3.0,
+                                    "y": 3.0,
+                                    "z": 3.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.30000001192092896,
+                                "upper_bound": 0.5,
+                                "invert_filter": false
+                            }
+                        }
+                    ]
+                },
+                "Structures": {
+                    "Meshes": [
+                        "sm_TempleEntrance_01",
+                        "sm_TempleColumn_01"
+                    ],
+                    "Nodes": [
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 100.0,
+                                    "y": 100.0,
+                                    "z": 100.0
+                                },
+                                "points_per_squared_meter": 0.009999999776482582
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 3.0,
+                                    "y": 3.0,
+                                    "z": 3.0
+                                },
+                                "scale_max": {
+                                    "x": 10.0,
+                                    "y": 10.0,
+                                    "z": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.3700000047683716,
+                                "upper_bound": 0.4000000059604645,
+                                "invert_filter": false
+                            }
+                        },
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 100.0,
+                                    "y": 100.0,
+                                    "z": 100.0
+                                },
+                                "points_per_squared_meter": 0.009999999776482582
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 3.0,
+                                    "y": 3.0,
+                                    "z": 3.0
+                                },
+                                "scale_max": {
+                                    "x": 10.0,
+                                    "y": 10.0,
+                                    "z": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.3700000047683716,
+                                "upper_bound": 0.4000000059604645,
+                                "invert_filter": false
+                            }
+                        }
+                    ]
+                },
+                "Trees": {
+                    "Meshes": [
+                        "sm_Tree_02",
+                        "sm_Tree_03"
+                    ],
+                    "Nodes": [
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 200.0,
+                                    "y": 200.0,
+                                    "z": 200.0
+                                },
+                                "points_per_squared_meter": 0.10000000149011612
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 0.5,
+                                    "y": 0.5,
+                                    "z": 0.5
+                                },
+                                "scale_max": {
+                                    "x": 5.0,
+                                    "y": 5.0,
+                                    "z": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.5,
+                                "upper_bound": 1.0,
+                                "invert_filter": false
+                            }
+                        },
+                        {
+                            "node_name": "SurfaceSampler",
+                            "node_settings": "PCGSurfaceSamplerSettings",
+                            "parameters": {
+                                "point_extents": {
+                                    "x": 200.0,
+                                    "y": 200.0,
+                                    "z": 200.0
+                                },
+                                "points_per_squared_meter": 0.10000000149011612
+                            }
+                        },
+                        {
+                            "node_name": "Spatial Noise",
+                            "node_settings": "PCGSpatialNoiseSettings",
+                            "parameters": {
+                                "random_offset": {
+                                    "x": 100000.0,
+                                    "y": 100000.0,
+                                    "z": 100000.0
+                                },
+                                "transform": {
+                                    "translation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
+                                    },
+                                    "rotation": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0,
+                                        "w": 1.0
+                                    },
+                                    "scale": {
+                                        "x": 1.0,
+                                        "y": 1.0,
+                                        "z": 1.0
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "TransformPoints",
+                            "node_settings": "PCGTransformPointsSettings",
+                            "parameters": {
+                                "offset_min": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "offset_max": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
+                                },
+                                "rotation_min": {
+                                    "pitch": 0.0,
+                                    "yaw": 0.0,
+                                    "roll": 0.0
+                                },
+                                "rotation_max": {
+                                    "pitch": 0.0,
+                                    "yaw": 360.0,
+                                    "roll": 0.0
+                                },
+                                "scale_min": {
+                                    "x": 0.5,
+                                    "y": 0.5,
+                                    "z": 0.5
+                                },
+                                "scale_max": {
+                                    "x": 5.0,
+                                    "y": 5.0,
+                                    "z": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "node_name": "StaticMeshSpawner",
+                            "node_settings": "PCGStaticMeshSpawnerSettings",
+                            "parameters": {}
+                        },
+                        {
+                            "node_name": "DensityFilter",
+                            "node_settings": "PCGDensityFilterSettings",
+                            "parameters": {
+                                "lower_bound": 0.5,
+                                "upper_bound": 1.0,
+                                "invert_filter": false
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Undesirable": {}
+}
