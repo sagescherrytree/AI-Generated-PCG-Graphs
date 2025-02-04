@@ -72,3 +72,14 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Unreal Engine files (this is a test).
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+
+
+.vs/AI-Gen-PCG-Graphs/v17/Browse.VC.db
+.vs/AI-Gen-PCG-Graphs/v17/Solution.VC.db
